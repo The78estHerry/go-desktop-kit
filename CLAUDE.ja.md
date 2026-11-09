@@ -8,7 +8,7 @@ Claude 向けのプロジェクト説明です。このリポジトリは初日�
 
 ## 目的
 
-Gio に依存しない再利用可能なパッケージ：`tray`（`fyne.io/systray` のラッパー）、`desktop/{single,autostart,paths,i18n,userauth}`、`secretstore`（keyring・agefile・memory の 3 つのバックエンド）、`sealbox`（パスワードによる暗号化、age 形式、パスワードは先に NFC 正規化）。GUI を使わないプログラムはこのリポジトリだけを import する。
+Gio に依存しない再利用可能なパッケージ：`tray`（`fyne.io/systray` のラッパー）、`desktop/{single,autostart,paths,i18n,userauth,apppin}`、`secretstore`（keyring・agefile・memory の 3 つのバックエンド）、`sealbox`（パスワードによる暗号化、age 形式、パスワードは先に NFC 正規化）。GUI を使わないプログラムはこのリポジトリだけを import する。
 
 最初の利用者は go-credential-porter。go-virtual-display も後でこれらのパッケージに切り替える。
 

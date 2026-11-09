@@ -8,7 +8,7 @@ This file is a translation. `CLAUDE.md` (Traditional Chinese) is the primary ver
 
 ## Purpose
 
-Reusable packages without Gio: `tray` (wraps `fyne.io/systray`), `desktop/{single,autostart,paths,i18n,userauth}`, `secretstore` (keyring, agefile and memory backends) and `sealbox` (passphrase encryption in age format; passphrases are NFC-normalized first). Programs without a GUI import only this repository.
+Reusable packages without Gio: `tray` (wraps `fyne.io/systray`), `desktop/{single,autostart,paths,i18n,userauth,apppin}`, `secretstore` (keyring, agefile and memory backends) and `sealbox` (passphrase encryption in age format; passphrases are NFC-normalized first). Programs without a GUI import only this repository.
 
 The first user is go-credential-porter; go-virtual-display will switch to these packages later.
 

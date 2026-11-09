@@ -8,7 +8,7 @@
 
 ## 目的
 
-不依賴 Gio 的可重用套件：`tray`（包裝 `fyne.io/systray`）、`desktop/{single,autostart,paths,i18n,userauth}`、`secretstore`（keyring、agefile、memory 三個後端）、`sealbox`（以密碼加密，age 格式，密碼先做 NFC 正規化）。不用 GUI 的程式只 import 這個 repo。
+不依賴 Gio 的可重用套件：`tray`（包裝 `fyne.io/systray`）、`desktop/{single,autostart,paths,i18n,userauth,apppin}`、`secretstore`（keyring、agefile、memory 三個後端）、`sealbox`（以密碼加密，age 格式，密碼先做 NFC 正規化）。不用 GUI 的程式只 import 這個 repo。
 
 第一個使用者是 go-credential-porter；go-virtual-display 之後也改用這裡的套件。
 
