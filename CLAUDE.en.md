@@ -42,3 +42,5 @@ The first user is go-credential-porter; go-virtual-display will switch to these 
 ## Progress log
 
 - 2026-11-09: Created the repository skeleton (go.mod, LICENSE, .gitignore, CLAUDE.md in three languages).
+- 2026-11-09: M1 done: `sealbox`, `secretstore` (keyring, agefile, memory) and `desktop/paths` with unit tests (secretstore is tested against the real Windows Credential Manager and cleaned up afterwards); GitHub Actions on three platforms; icon finalized (blocks B3: GO + padlock + folder + tray + speed lines, `assets/icon.svg`, rendered by `assets/make-icon.ps1`); READMEs in three languages. Not public yet, no v0.1.0 tag yet.
+  - Known: each write of the age file backend takes about 1 second (the whole file is re-encrypted with scrypt); on Windows the keyring name is `<appID>:<service>/<key>` (go-keyring always uses `:`).

@@ -42,3 +42,5 @@
 ## 進度紀錄
 
 - 2026-11-09：建立 repo 骨架（go.mod、LICENSE、.gitignore、CLAUDE.md 三語版本）。
+- 2026-11-09：M1 完成 `sealbox`、`secretstore`（keyring、agefile、memory）、`desktop/paths` 與單元測試（secretstore 實際寫入 Windows Credential Manager 測試，測完清除）；三平台 GitHub Actions；圖示定案（積木 B3：GO＋鎖＋資料夾＋系統列＋速度線，`assets/icon.svg`，`assets/make-icon.ps1` 轉 PNG）；三語 README。尚未公開、尚未打 v0.1.0 tag。
+  - 已知：age 檔案後端每次寫入約 1 秒（整個檔案重新 scrypt 加密）；Windows 上 keyring 名稱是 `<appID>:<service>/<key>`（go-keyring 固定用 `:`）。

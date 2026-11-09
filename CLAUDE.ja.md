@@ -42,3 +42,5 @@ Gio に依存しない再利用可能なパッケージ：`tray`（`fyne.io/syst
 ## 進捗記録
 
 - 2026-11-09：リポジトリの骨組みを作成（go.mod、LICENSE、.gitignore、3 言語版の CLAUDE.md）。
+- 2026-11-09：M1 完了。`sealbox`、`secretstore`（keyring・agefile・memory）、`desktop/paths` と単体テスト（secretstore は実際の Windows 資格情報マネージャーでテストし、終了後に削除）、3 プラットフォームの GitHub Actions、アイコン決定（積み木 B3：GO・錠前・フォルダー・トレイ・スピード線、`assets/icon.svg`、`assets/make-icon.ps1` で PNG に変換）、3 言語の README。未公開、v0.1.0 タグは未作成。
+  - 既知の点：age ファイルのバックエンドは書き込みごとに約 1 秒かかる（ファイル全体を scrypt で再暗号化）。Windows での keyring 名は `<appID>:<service>/<key>`（go-keyring は常に `:` を使う）。
