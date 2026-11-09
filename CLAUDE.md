@@ -46,3 +46,4 @@
   - 已知：age 檔案後端每次寫入約 1 秒（整個檔案重新 scrypt 加密）；Windows 上 keyring 名稱是 `<appID>:<service>/<key>`（go-keyring 固定用 `:`）。
 - 2026-11-09（暫停點）：公開 go-desktop-kit 進行到 gitea-to-github `checklist.md` 第 4 步。已完成：敏感資料檢查（全部乾淨）、使用者決定（歷史原封不動、CLAUDE.md 公開、新增 RELEASING.md、Gitea 兩邊都推）、Gitea repo 已建並推上 main。**下次從這裡接續**：請使用者在 GitHub 建空的 Public repo `The78estHerry/go-desktop-kit`（不勾任何初始檔），並把它加進 fine-grained token 的 Repository access（Contents: Read and write）；確認後 `git remote add github …`、推 main、打 `v0.1.0` tag 推兩邊、等 CI 通過、兩邊建 Release，最後在 gitea-to-github 寫 `cases/go-desktop-kit.md`。
 - 2026-11-09：**v0.1.0 已發佈**。main 與 tag 推上 GitHub 與 Gitea，CI 三平台通過，兩邊都有 Release，module proxy 可取得。fine-grained token 需要 Contents 與 Workflows 兩個權限。
+- 待辦：Gitea Actions 也會讀 `.github/workflows/ci.yml`，但 NAS 上只有 Linux runner，Windows、macOS 工作會一直排隊、不會執行（不會產生失敗通知）。之後考慮加 `.gitea/workflows/` 只跑 ubuntu，或接受現況。
