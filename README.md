@@ -20,7 +20,9 @@ Go 桌面程式的可重用基礎套件：把機密存進作業系統的保管�
 | `secretstore` | 機密保管庫：Windows Credential Manager、macOS Keychain、Linux Secret Service；沒有桌面的 Linux 改用 age 加密檔 | v0.1.0 |
 | `desktop/paths` | 各平台的設定與快取資料夾 | v0.1.0 |
 | `tray` | 系統列圖示與選單 | 規劃中 |
-| `desktop/single`、`desktop/autostart`、`desktop/i18n` | 單一執行個體、登入時啟動、介面語言 | 規劃中 |
+| `desktop/single` | 只執行一份；第二份啟動時請第一份顯示出來 | 開發中（main） |
+| `desktop/autostart` | 登入時啟動（Windows Run 機碼、macOS LaunchAgent、Linux XDG autostart） | 開發中（main） |
+| `desktop/i18n` | 介面語言 | 規劃中 |
 | `desktop/userauth`、`desktop/apppin` | 作業系統本人驗證（Windows Hello 等），以及不可用時的 App PIN | 規劃中 |
 
 ## 安裝
@@ -65,6 +67,7 @@ if err := sealbox.Seal(&buf, data, passphrase); err != nil {
 |---|---|---|---|
 | `sealbox`、`desktop/paths` | 實機測試 | CI 驗證 | CI 驗證 |
 | `secretstore` | 實機測試 | 已實作、未測試 | 已實作、未測試 |
+| `desktop/single`、`desktop/autostart` | 實機測試 | CI 測試、未實機測試 | CI 測試、未實機測試 |
 
 ## 授權
 

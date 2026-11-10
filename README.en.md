@@ -22,7 +22,9 @@ UI components that depend on [Gio](https://gioui.org) live in a separate reposit
 | `secretstore` | Secret storage: Windows Credential Manager, macOS Keychain, Linux Secret Service; an age-encrypted file on Linux without a desktop | v0.1.0 |
 | `desktop/paths` | Per-platform settings and cache folders | v0.1.0 |
 | `tray` | System tray icon and menu | Planned |
-| `desktop/single`, `desktop/autostart`, `desktop/i18n` | Single instance, start at login, UI language | Planned |
+| `desktop/single` | Run one instance; a second launch asks the first to show itself | In development (main) |
+| `desktop/autostart` | Start at login (Windows Run key, macOS LaunchAgent, Linux XDG autostart) | In development (main) |
+| `desktop/i18n` | UI language | Planned |
 | `desktop/userauth`, `desktop/apppin` | OS user verification (Windows Hello and others), and an app PIN when it is unavailable | Planned |
 
 ## Install
@@ -67,6 +69,7 @@ Only Windows is tested on real hardware so far. GitHub Actions builds macOS and 
 |---|---|---|---|
 | `sealbox`, `desktop/paths` | Tested on hardware | Verified in CI | Verified in CI |
 | `secretstore` | Tested on hardware | Implemented, not tested | Implemented, not tested |
+| `desktop/single`, `desktop/autostart` | Tested on hardware | Tested in CI, not on hardware | Tested in CI, not on hardware |
 
 ## License
 
