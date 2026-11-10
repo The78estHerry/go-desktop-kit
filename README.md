@@ -23,8 +23,8 @@ Go 桌面程式的可重用基礎套件：把機密存進作業系統的保管�
 | `desktop/single` | 只執行一份；第二份啟動時請第一份顯示出來 | v0.2.0 |
 | `desktop/autostart` | 登入時啟動（Windows Run 機碼、macOS LaunchAgent、Linux XDG autostart） | v0.2.0 |
 | `desktop/i18n` | 介面翻譯：訊息表（缺字退回預設語言）、依系統偏好語言挑選（分辨繁簡中文） | v0.2.0 |
-| `desktop/userauth` | 作業系統的本人驗證：Windows Hello（臉部、指紋、PIN）、macOS Touch ID／登入密碼；Linux 回傳無法使用 | 開發中（main） |
-| `desktop/apppin` | 作業系統無法驗證時的 App PIN：只存 argon2id 雜湊，連錯 5 次後鎖定（30 秒起每次加倍，最多 1 小時），重開程式不歸零 | 開發中（main） |
+| `desktop/userauth` | 作業系統的本人驗證：Windows Hello（臉部、指紋、PIN）、macOS Touch ID／登入密碼；Linux 回傳無法使用 | v0.3.0 |
+| `desktop/apppin` | 作業系統無法驗證時的 App PIN：只存 argon2id 雜湊，連錯 5 次後鎖定（30 秒起每次加倍，最多 1 小時），重開程式不歸零 | v0.3.0 |
 
 ## 安裝
 

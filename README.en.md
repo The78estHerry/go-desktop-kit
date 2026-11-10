@@ -25,8 +25,8 @@ UI components that depend on [Gio](https://gioui.org) live in a separate reposit
 | `desktop/single` | Run one instance; a second launch asks the first to show itself | v0.2.0 |
 | `desktop/autostart` | Start at login (Windows Run key, macOS LaunchAgent, Linux XDG autostart) | v0.2.0 |
 | `desktop/i18n` | UI translation: message table (missing text falls back to the default language), picks from the system's preferred languages (tells Traditional and Simplified Chinese apart) | v0.2.0 |
-| `desktop/userauth` | OS user verification: Windows Hello (face, fingerprint, PIN), macOS Touch ID or login password; unavailable on Linux | In development (main) |
-| `desktop/apppin` | An app PIN when the OS cannot verify: only an argon2id hash is stored; 5 wrong attempts lock it (30 seconds, doubling up to one hour), surviving restarts | In development (main) |
+| `desktop/userauth` | OS user verification: Windows Hello (face, fingerprint, PIN), macOS Touch ID or login password; unavailable on Linux | v0.3.0 |
+| `desktop/apppin` | An app PIN when the OS cannot verify: only an argon2id hash is stored; 5 wrong attempts lock it (30 seconds, doubling up to one hour), surviving restarts | v0.3.0 |
 
 ## Install
 

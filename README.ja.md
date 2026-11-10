@@ -25,8 +25,8 @@ Go のデスクトッププログラム向けの再利用可能な基礎パッ�
 | `desktop/single` | 1 つだけ起動。2 つ目の起動時は 1 つ目に表示を依頼 | v0.2.0 |
 | `desktop/autostart` | ログイン時の起動（Windows の Run キー、macOS の LaunchAgent、Linux の XDG autostart） | v0.2.0 |
 | `desktop/i18n` | UI の翻訳：メッセージ表（訳がなければ既定の言語）、システムの優先言語から選択（繁体字と簡体字を区別） | v0.2.0 |
-| `desktop/userauth` | OS の本人確認：Windows Hello（顔、指紋、PIN）、macOS の Touch ID／ログインパスワード。Linux では使用不可 | 開発中（main） |
-| `desktop/apppin` | OS で本人確認できない場合のアプリ PIN：argon2id ハッシュのみ保存、5 回間違えるとロック（30 秒から倍々、最大 1 時間）、再起動してもリセットしない | 開発中（main） |
+| `desktop/userauth` | OS の本人確認：Windows Hello（顔、指紋、PIN）、macOS の Touch ID／ログインパスワード。Linux では使用不可 | v0.3.0 |
+| `desktop/apppin` | OS で本人確認できない場合のアプリ PIN：argon2id ハッシュのみ保存、5 回間違えるとロック（30 秒から倍々、最大 1 時間）、再起動してもリセットしない | v0.3.0 |
 
 ## インストール
 
