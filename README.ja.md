@@ -21,10 +21,10 @@ Go のデスクトッププログラム向けの再利用可能な基礎パッ�
 | `sealbox` | パスワードによる暗号化と復号。標準の [age](https://age-encryption.org) 形式で出力 | v0.1.0 |
 | `secretstore` | 機密情報の保管：Windows 資格情報マネージャー、macOS キーチェーン、Linux Secret Service。デスクトップのない Linux では age で暗号化したファイル | v0.1.0 |
 | `desktop/paths` | 各プラットフォームの設定フォルダーとキャッシュフォルダー | v0.1.0 |
-| `tray` | システムトレイのアイコンとメニュー（fyne.io/systray を包む。コールバック、PNG アイコン、Windows では ICO に自動変換） | 開発中（main） |
-| `desktop/single` | 1 つだけ起動。2 つ目の起動時は 1 つ目に表示を依頼 | 開発中（main） |
-| `desktop/autostart` | ログイン時の起動（Windows の Run キー、macOS の LaunchAgent、Linux の XDG autostart） | 開発中（main） |
-| `desktop/i18n` | UI の翻訳：メッセージ表（訳がなければ既定の言語）、システムの優先言語から選択（繁体字と簡体字を区別） | 開発中（main） |
+| `tray` | システムトレイのアイコンとメニュー（fyne.io/systray を包む。コールバック、PNG アイコン、Windows では ICO に自動変換） | v0.2.0 |
+| `desktop/single` | 1 つだけ起動。2 つ目の起動時は 1 つ目に表示を依頼 | v0.2.0 |
+| `desktop/autostart` | ログイン時の起動（Windows の Run キー、macOS の LaunchAgent、Linux の XDG autostart） | v0.2.0 |
+| `desktop/i18n` | UI の翻訳：メッセージ表（訳がなければ既定の言語）、システムの優先言語から選択（繁体字と簡体字を区別） | v0.2.0 |
 | `desktop/userauth`、`desktop/apppin` | OS の本人確認（Windows Hello など）と、使えない場合のアプリ PIN | 予定 |
 
 ## インストール
