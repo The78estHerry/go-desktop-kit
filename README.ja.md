@@ -25,7 +25,8 @@ Go のデスクトッププログラム向けの再利用可能な基礎パッ�
 | `desktop/single` | 1 つだけ起動。2 つ目の起動時は 1 つ目に表示を依頼 | v0.2.0 |
 | `desktop/autostart` | ログイン時の起動（Windows の Run キー、macOS の LaunchAgent、Linux の XDG autostart） | v0.2.0 |
 | `desktop/i18n` | UI の翻訳：メッセージ表（訳がなければ既定の言語）、システムの優先言語から選択（繁体字と簡体字を区別） | v0.2.0 |
-| `desktop/userauth`、`desktop/apppin` | OS の本人確認（Windows Hello など）と、使えない場合のアプリ PIN | 予定 |
+| `desktop/userauth` | OS の本人確認：Windows Hello（顔、指紋、PIN）、macOS の Touch ID／ログインパスワード。Linux では使用不可 | 開発中（main） |
+| `desktop/apppin` | OS で本人確認できない場合のアプリ PIN：argon2id ハッシュのみ保存、5 回間違えるとロック（30 秒から倍々、最大 1 時間）、再起動してもリセットしない | 開発中（main） |
 
 ## インストール
 
@@ -71,6 +72,8 @@ if err := sealbox.Seal(&buf, data, passphrase); err != nil {
 | `secretstore` | 実機テスト済み | 実装済み・未テスト | 実装済み・未テスト |
 | `desktop/single`、`desktop/autostart`、`desktop/i18n` | 実機テスト済み | CI でテスト、実機は未テスト | CI でテスト、実機は未テスト |
 | `tray` | 実機テスト済み | 実装済み・未テスト | 実装済み・未テスト |
+| `desktop/userauth` | 実機テスト済み | 実装済み・未テスト | 非対応（アプリ PIN を使用） |
+| `desktop/apppin` | 実機テスト済み | CI でテスト | CI でテスト |
 
 ## ライセンス
 

@@ -25,7 +25,8 @@ UI components that depend on [Gio](https://gioui.org) live in a separate reposit
 | `desktop/single` | Run one instance; a second launch asks the first to show itself | v0.2.0 |
 | `desktop/autostart` | Start at login (Windows Run key, macOS LaunchAgent, Linux XDG autostart) | v0.2.0 |
 | `desktop/i18n` | UI translation: message table (missing text falls back to the default language), picks from the system's preferred languages (tells Traditional and Simplified Chinese apart) | v0.2.0 |
-| `desktop/userauth`, `desktop/apppin` | OS user verification (Windows Hello and others), and an app PIN when it is unavailable | Planned |
+| `desktop/userauth` | OS user verification: Windows Hello (face, fingerprint, PIN), macOS Touch ID or login password; unavailable on Linux | In development (main) |
+| `desktop/apppin` | An app PIN when the OS cannot verify: only an argon2id hash is stored; 5 wrong attempts lock it (30 seconds, doubling up to one hour), surviving restarts | In development (main) |
 
 ## Install
 
@@ -71,6 +72,8 @@ Only Windows is tested on real hardware so far. GitHub Actions builds macOS and 
 | `secretstore` | Tested on hardware | Implemented, not tested | Implemented, not tested |
 | `desktop/single`, `desktop/autostart`, `desktop/i18n` | Tested on hardware | Tested in CI, not on hardware | Tested in CI, not on hardware |
 | `tray` | Tested on hardware | Implemented, not tested | Implemented, not tested |
+| `desktop/userauth` | Tested on hardware | Implemented, not tested | Unsupported (use the app PIN) |
+| `desktop/apppin` | Tested on hardware | Tested in CI | Tested in CI |
 
 ## License
 
