@@ -24,7 +24,7 @@ Go のデスクトッププログラム向けの再利用可能な基礎パッ�
 | `tray` | システムトレイのアイコンとメニュー | 予定 |
 | `desktop/single` | 1 つだけ起動。2 つ目の起動時は 1 つ目に表示を依頼 | 開発中（main） |
 | `desktop/autostart` | ログイン時の起動（Windows の Run キー、macOS の LaunchAgent、Linux の XDG autostart） | 開発中（main） |
-| `desktop/i18n` | UI の言語 | 予定 |
+| `desktop/i18n` | UI の翻訳：メッセージ表（訳がなければ既定の言語）、システムの優先言語から選択（繁体字と簡体字を区別） | 開発中（main） |
 | `desktop/userauth`、`desktop/apppin` | OS の本人確認（Windows Hello など）と、使えない場合のアプリ PIN | 予定 |
 
 ## インストール
@@ -69,7 +69,7 @@ if err := sealbox.Seal(&buf, data, passphrase); err != nil {
 |---|---|---|---|
 | `sealbox`、`desktop/paths` | 実機テスト済み | CI で確認 | CI で確認 |
 | `secretstore` | 実機テスト済み | 実装済み・未テスト | 実装済み・未テスト |
-| `desktop/single`、`desktop/autostart` | 実機テスト済み | CI でテスト、実機は未テスト | CI でテスト、実機は未テスト |
+| `desktop/single`、`desktop/autostart`、`desktop/i18n` | 実機テスト済み | CI でテスト、実機は未テスト | CI でテスト、実機は未テスト |
 
 ## ライセンス
 

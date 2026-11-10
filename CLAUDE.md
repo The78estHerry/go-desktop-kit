@@ -48,3 +48,4 @@
 - 2026-11-09：**v0.1.0 已發佈**。main 與 tag 推上 GitHub 與 Gitea，CI 三平台通過，兩邊都有 Release，module proxy 可取得。fine-grained token 需要 Contents 與 Workflows 兩個權限。
 - 待辦：Gitea Actions 也會讀 `.github/workflows/ci.yml`，但 NAS 上只有 Linux runner，Windows、macOS 工作會一直排隊、不會執行（不會產生失敗通知）。之後考慮加 `.gitea/workflows/` 只跑 ubuntu，或接受現況。
 - 2026-11-11：M4 第一步：新增 `desktop/single`（Windows 具名 mutex＋event；macOS／Linux／BSD 用 flock＋Unix socket，第二份啟動會請第一份顯示）與 `desktop/autostart`（Windows Run 機碼、macOS LaunchAgent、Linux XDG autostart；.desktop 與 plist 內容在核心產生，各平台只決定寫入位置）。Windows 實際測試（autostart 的測試寫入暫存機碼 `HKCU\Software\go-desktop-kit-test`，測完刪除，不碰真正的 Run 機碼）；Linux、macOS、FreeBSD 交叉 vet。尚未發版。下一步：`desktop/i18n`（訊息表，en／zh-TW／ja）。
+- 2026-11-11：新增 `desktop/i18n`（重新設計，使用者決定）：`Catalog` 訊息表（缺字退回預設語言、再退回 key）、`Match` 依偏好語言挑選（完全相同 → 同語言同文字 → 同語言；只有繁中時所有中文使用者都用繁中）、`Missing` 供測試檢查翻譯是否齊全、`SystemLanguages`（Windows `GetUserPreferredUILanguages`、macOS `AppleLanguages`、其他看 gettext 環境變數）。舊版讀安裝設定的部分不搬（由 App 決定）。下一步：`tray`。

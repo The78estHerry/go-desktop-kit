@@ -22,7 +22,7 @@ Go 桌面程式的可重用基礎套件：把機密存進作業系統的保管�
 | `tray` | 系統列圖示與選單 | 規劃中 |
 | `desktop/single` | 只執行一份；第二份啟動時請第一份顯示出來 | 開發中（main） |
 | `desktop/autostart` | 登入時啟動（Windows Run 機碼、macOS LaunchAgent、Linux XDG autostart） | 開發中（main） |
-| `desktop/i18n` | 介面語言 | 規劃中 |
+| `desktop/i18n` | 介面翻譯：訊息表（缺字退回預設語言）、依系統偏好語言挑選（分辨繁簡中文） | 開發中（main） |
 | `desktop/userauth`、`desktop/apppin` | 作業系統本人驗證（Windows Hello 等），以及不可用時的 App PIN | 規劃中 |
 
 ## 安裝
@@ -67,7 +67,7 @@ if err := sealbox.Seal(&buf, data, passphrase); err != nil {
 |---|---|---|---|
 | `sealbox`、`desktop/paths` | 實機測試 | CI 驗證 | CI 驗證 |
 | `secretstore` | 實機測試 | 已實作、未測試 | 已實作、未測試 |
-| `desktop/single`、`desktop/autostart` | 實機測試 | CI 測試、未實機測試 | CI 測試、未實機測試 |
+| `desktop/single`、`desktop/autostart`、`desktop/i18n` | 實機測試 | CI 測試、未實機測試 | CI 測試、未實機測試 |
 
 ## 授權
 

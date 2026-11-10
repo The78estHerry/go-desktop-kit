@@ -24,7 +24,7 @@ UI components that depend on [Gio](https://gioui.org) live in a separate reposit
 | `tray` | System tray icon and menu | Planned |
 | `desktop/single` | Run one instance; a second launch asks the first to show itself | In development (main) |
 | `desktop/autostart` | Start at login (Windows Run key, macOS LaunchAgent, Linux XDG autostart) | In development (main) |
-| `desktop/i18n` | UI language | Planned |
+| `desktop/i18n` | UI translation: message table (missing text falls back to the default language), picks from the system's preferred languages (tells Traditional and Simplified Chinese apart) | In development (main) |
 | `desktop/userauth`, `desktop/apppin` | OS user verification (Windows Hello and others), and an app PIN when it is unavailable | Planned |
 
 ## Install
@@ -69,7 +69,7 @@ Only Windows is tested on real hardware so far. GitHub Actions builds macOS and 
 |---|---|---|---|
 | `sealbox`, `desktop/paths` | Tested on hardware | Verified in CI | Verified in CI |
 | `secretstore` | Tested on hardware | Implemented, not tested | Implemented, not tested |
-| `desktop/single`, `desktop/autostart` | Tested on hardware | Tested in CI, not on hardware | Tested in CI, not on hardware |
+| `desktop/single`, `desktop/autostart`, `desktop/i18n` | Tested on hardware | Tested in CI, not on hardware | Tested in CI, not on hardware |
 
 ## License
 
