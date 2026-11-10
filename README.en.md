@@ -21,7 +21,7 @@ UI components that depend on [Gio](https://gioui.org) live in a separate reposit
 | `sealbox` | Passphrase encryption and decryption in the standard [age](https://age-encryption.org) format | v0.1.0 |
 | `secretstore` | Secret storage: Windows Credential Manager, macOS Keychain, Linux Secret Service; an age-encrypted file on Linux without a desktop | v0.1.0 |
 | `desktop/paths` | Per-platform settings and cache folders | v0.1.0 |
-| `tray` | System tray icon and menu | Planned |
+| `tray` | System tray icon and menu (wraps fyne.io/systray; callbacks, PNG icons converted to ICO on Windows) | In development (main) |
 | `desktop/single` | Run one instance; a second launch asks the first to show itself | In development (main) |
 | `desktop/autostart` | Start at login (Windows Run key, macOS LaunchAgent, Linux XDG autostart) | In development (main) |
 | `desktop/i18n` | UI translation: message table (missing text falls back to the default language), picks from the system's preferred languages (tells Traditional and Simplified Chinese apart) | In development (main) |
@@ -70,6 +70,7 @@ Only Windows is tested on real hardware so far. GitHub Actions builds macOS and 
 | `sealbox`, `desktop/paths` | Tested on hardware | Verified in CI | Verified in CI |
 | `secretstore` | Tested on hardware | Implemented, not tested | Implemented, not tested |
 | `desktop/single`, `desktop/autostart`, `desktop/i18n` | Tested on hardware | Tested in CI, not on hardware | Tested in CI, not on hardware |
+| `tray` | Tested on hardware | Implemented, not tested | Implemented, not tested |
 
 ## License
 

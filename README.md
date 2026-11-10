@@ -19,7 +19,7 @@ Go 桌面程式的可重用基礎套件：把機密存進作業系統的保管�
 | `sealbox` | 用密碼加密與解密，輸出標準 [age](https://age-encryption.org) 格式 | v0.1.0 |
 | `secretstore` | 機密保管庫：Windows Credential Manager、macOS Keychain、Linux Secret Service；沒有桌面的 Linux 改用 age 加密檔 | v0.1.0 |
 | `desktop/paths` | 各平台的設定與快取資料夾 | v0.1.0 |
-| `tray` | 系統列圖示與選單 | 規劃中 |
+| `tray` | 系統列圖示與選單（包裝 fyne.io/systray；用 callback、PNG 圖示，Windows 自動轉 ICO） | 開發中（main） |
 | `desktop/single` | 只執行一份；第二份啟動時請第一份顯示出來 | 開發中（main） |
 | `desktop/autostart` | 登入時啟動（Windows Run 機碼、macOS LaunchAgent、Linux XDG autostart） | 開發中（main） |
 | `desktop/i18n` | 介面翻譯：訊息表（缺字退回預設語言）、依系統偏好語言挑選（分辨繁簡中文） | 開發中（main） |
@@ -68,6 +68,7 @@ if err := sealbox.Seal(&buf, data, passphrase); err != nil {
 | `sealbox`、`desktop/paths` | 實機測試 | CI 驗證 | CI 驗證 |
 | `secretstore` | 實機測試 | 已實作、未測試 | 已實作、未測試 |
 | `desktop/single`、`desktop/autostart`、`desktop/i18n` | 實機測試 | CI 測試、未實機測試 | CI 測試、未實機測試 |
+| `tray` | 實機測試 | 已實作、未測試 | 已實作、未測試 |
 
 ## 授權
 
